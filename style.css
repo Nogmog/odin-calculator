@@ -1,0 +1,16 @@
+#container{
+    display:inline-grid;
+    background-color:grey;
+    border: 1px solid black;
+}
+
+#screen{
+    background-color: darkgrey;
+
+}
+
+.button{
+    background-color: pink;
+    border: 1px solid black;
+
+}
