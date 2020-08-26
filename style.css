@@ -1,16 +1,49 @@
 #container{
-    display:inline-grid;
     background-color:grey;
     border: 1px solid black;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 #screen{
     background-color: darkgrey;
 
 }
+#operation{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". b b o"
+                         ". . . o"
+                         ". . . o"
+                         ". . . o"
+                         ". d d .";
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
 
+
+}
 .button{
-    background-color: pink;
+    background-color: #615c5c;
     border: 1px solid black;
+    color: white;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
 
+.operator{
+    grid-area: o;
+}
+
+#dot{
+    grid-area: d;
+    grid-row: d / d;
+}
+
+#backspace{
+    grid-area: b;
+    grid-row: b / b;
 }
