@@ -73,3 +73,7 @@
     grid-area: b;
     height: 160px;
 }
+
+#clear{
+    grid-area: a;
+}
