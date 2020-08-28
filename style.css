@@ -7,7 +7,7 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    background-color:grey;
+    background-color:#647fa3;
 }
 
 #screen{
@@ -39,7 +39,7 @@
         ". . . a"
         ". . . b"
         ". . . b"
-        "c c . .";
+        ". c c .";
     align-items: center;
     justify-content: center;
     grid-gap: 1em;
