@@ -27,7 +27,7 @@ function showValue(e){
     else{ansTxt.textContent = ansTxt.textContent + numValue;}
 }
 
-allOperateBtn.forEach(e => addEventListener("mouseup", calculate));
+allOperateBtn.forEach(e => e.addEventListener("mouseup", calculate));
 function calculate(e){
     if (ansTxt.textContent != 0){
         const operator = e.target.id;
