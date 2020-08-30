@@ -47,13 +47,11 @@ allOperateBtn.forEach(e => e.addEventListener("mouseup", calculate));
 function calculate(e){
     let ans = "error"
     if (prevOperate != ""){ // past operation
-        console.log("2nd number");
         const operator = e.target.id;
         ans = doCalc(operator, Number(prevTxt.textContent.slice(0 ,-2)), Number(ansTxt.textContent));
     }else{ //no operation
         ans = ansTxt.textContent;
     }
-    console.log(ans)
     const sign = e.target.getAttribute("value");
     prevTxt.textContent = ans + " " + sign;
     ansTxt.textContent = "0";
@@ -65,3 +63,7 @@ clearBtn.addEventListener("mouseup", function(){
     ansTxt.textContent = "0"
     prevOperate = ""
 });
+
+dotBtn.addEventListener("mouseup", function(){
+    ansTxt.textContent = ansTxt.textContent + ".";
+})
