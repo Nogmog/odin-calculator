@@ -21,16 +21,16 @@ function divide(a, b){
 }
 
 function doCalc(operator, numA, numB){
-    if(operator = "add"){
+    
+    if(operator == "add"){
         return add(numA, numB);
-    }else if(operator = "subtract"){
+    }else if(operator == "subtract"){
         return sub(numA, numB);
-    }else if(operator = "multiply"){
+    }else if(operator == "multiply"){
         return multi(numA, numB);
-    }else if(operator = "divide"){
+    }else if(operator == "divide"){
         return divide(numA, numB);
     }
-    else{console.log("Error")}
 }
 
 
@@ -46,8 +46,11 @@ function showValue(e){
 allOperateBtn.forEach(e => e.addEventListener("mouseup", calculate));
 function calculate(e){
     let ans = "error"
+    const operator = e.target.id
     if (prevOperate != ""){ // past operation
-        const operator = e.target.id;
+        if (ansTxt.textContent == "0"){
+            
+        }
         ans = doCalc(operator, Number(prevTxt.textContent.slice(0 ,-2)), Number(ansTxt.textContent));
     }else{ //no operation
         ans = ansTxt.textContent;
@@ -55,7 +58,7 @@ function calculate(e){
     const sign = e.target.getAttribute("value");
     prevTxt.textContent = ans + " " + sign;
     ansTxt.textContent = "0";
-    prevOperate = e.target.id;
+    prevOperate = operator;
 }
 
 clearBtn.addEventListener("mouseup", function(){
