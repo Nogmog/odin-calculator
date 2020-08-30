@@ -48,16 +48,17 @@ function calculate(e){
     let ans = "error"
     const operator = e.target.id
     if (prevOperate != ""){ // past operation
-        if (ansTxt.textContent == "0"){
-            
+        if (ansTxt.textContent == ""){
+            ans = prevTxt.textContent.slice(0 ,-2)
+        }else{
+        ans = doCalc(prevOperate, Number(prevTxt.textContent.slice(0 ,-2)), Number(ansTxt.textContent));
         }
-        ans = doCalc(operator, Number(prevTxt.textContent.slice(0 ,-2)), Number(ansTxt.textContent));
     }else{ //no operation
         ans = ansTxt.textContent;
     }
     const sign = e.target.getAttribute("value");
     prevTxt.textContent = ans + " " + sign;
-    ansTxt.textContent = "0";
+    ansTxt.textContent = "";
     prevOperate = operator;
 }
 
