@@ -19,6 +19,9 @@ const sub = (a, b) => {return a - b}
 const multi = (a, b) => {return a * b}
 
 function divide(a, b){
+    if(a == 0 || b == 0){
+        return "Error"
+}else{
     return a / b;
 }
 
