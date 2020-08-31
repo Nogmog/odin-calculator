@@ -12,6 +12,7 @@ const numBtn = selOper.querySelectorAll(".number");
 const clearBtn = selOper.querySelector("#clear");
 const allOperateBtn = selOper.querySelectorAll(".operator");
 const equalBtn = selOper.querySelector("#equal")
+const backBtn = selOper.querySelector("#backspace")
 
 const add = (a, b) => {return a + b}
 const sub = (a, b) => {return a - b}
@@ -81,4 +82,8 @@ equalBtn.addEventListener("mouseup", function(){
     }else{
         ansTxt.textContent = "Error";
     }
+})
+
+backBtn.addEventListener("mouseup", function(){
+    ansTxt.textContent = ansTxt.textContent.slice(0, -1)
 })
