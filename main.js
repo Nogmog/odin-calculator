@@ -71,7 +71,10 @@ clearBtn.addEventListener("mouseup", function(){
 });
 
 dotBtn.addEventListener("mouseup", function(){
+    if(ansTxt.textContent.includes(".")){
+    }else{
     ansTxt.textContent = ansTxt.textContent + ".";
+    }
 })
 
 equalBtn.addEventListener("mouseup", function(){

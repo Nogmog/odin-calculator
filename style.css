@@ -65,6 +65,10 @@
     background-color: orangered;
 }
 
+.special{
+    background-color: brown;
+}
+
 #dot{
     grid-area: c;
     width: 220px;
